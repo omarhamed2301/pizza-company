@@ -11,11 +11,19 @@ function Cart() {
   if (!cart.length) return <EmptyCart />;
   return (
     <div className="container-fluid cart">
-      <div className="d-flex justify-content-between align-items-center">
+      
         <Link to="/menu" style={{ textDecoration: "none", color: "darkblue" }}>
           &larr; Back to menu
         </Link>
-        <div className="px-4 d-flex gap-4">
+        
+
+      <h2 className="mt-5 px-4 mb-3 cartUserName">Your cart, {userName}</h2>
+      <ul style={{ listStyle: "none" }} className="w-100 cartItem">
+        {cart.map((item) => (
+          <CartItem item={item} key={item.pizzaId} />
+        ))}
+      </ul>
+      <div className="px-4  d-flex gap-4" style={{marginBottom:'70px', marginTop:'20px'}} >
           <Link
             to="/order/new"
             className="orderBtn"
@@ -37,13 +45,6 @@ function Cart() {
             CLEAR CART
           </button>
         </div>
-      </div>
-      <h2 className="mt-5 px-4 mb-3 cartUserName">Your cart, {userName}</h2>
-      <ul style={{ listStyle: "none" }} className="w-100 cartItem">
-        {cart.map((item) => (
-          <CartItem item={item} key={item.pizzaId} />
-        ))}
-      </ul>
     </div>
   );
 }
