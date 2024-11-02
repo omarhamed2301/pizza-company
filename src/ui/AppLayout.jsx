@@ -10,7 +10,7 @@ export default function AppLayout() {
       {isLoading && <Loader />}
       <Header />
 
-      <main className="w-100 my-5">
+      <main className="w-100 my-5" style={{overflowY:'scroll'}}>
         <Outlet />
       </main>
 

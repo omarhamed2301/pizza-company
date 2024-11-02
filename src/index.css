@@ -125,12 +125,29 @@ header{
   .searchOrderInput:focus{
     width: 180px;
   }
-  /* .cartItems .w-25{
-    width: 75% !important;
-
+  .cartOverview{
+    padding: 0px 10px;
   }
-  .cartItems .w-75{
-    width: 25% !important;
-  } */
-
+  .openCart{
+    font-size: 16px !important;
+  }
+  .cartOverview p{
+    font-size: 16px !important;
+  }
+  .justify-content-end{
+    justify-content: center !important;
+  }
+  .cartItemName {
+    font-size: 14px !important;
+  }
+  .cartItem{
+    padding: 0;
+  }
+  .cart .px-4{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .orderBtn2{
+    padding: 3px 5px;
+  }
 }

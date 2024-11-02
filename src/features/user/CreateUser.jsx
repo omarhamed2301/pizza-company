@@ -14,24 +14,27 @@ function CreateUser() {
     navigate("/menu");
   }
   const userName = useSelector((store) => store.user.userName);
+  if (userName !== "")
+    return (
+      <div>
+        <Link to="/menu" className="orderBtn mt-5 py-3 px-4">
+          Start ordering
+        </Link>
+      </div>
+    );
   return (
     <form onSubmit={handleSubmit}>
-      {userName === "" && (
-        <>
-          <p>👋 Welcome! Please start by telling us your name:</p>
-          <input
-            className="searchOrderInput"
-            type="text"
-            placeholder="Your full name"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </>
-      )}
-
-      {userName !== "" && (
+      <p>👋 Welcome! Please start by telling us your name:</p>
+      <input
+        className="searchOrderInput"
+        type="text"
+        placeholder="Your full name"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      {username && (
         <div>
-          <Link to='/menu' className="orderBtn mt-5 py-3 px-5">Start ordering</Link>
+          <button className="orderBtn orderBtn3 mt-4 py-2 px-4">Start ordering</button>
         </div>
       )}
     </form>
