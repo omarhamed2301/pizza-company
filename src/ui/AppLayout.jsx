@@ -6,11 +6,11 @@ export default function AppLayout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
   return (
-    <div className="layout">
+    <div style={{width:'100%'}}>
       {isLoading && <Loader />}
       <Header />
 
-      <main style={{overflowY:'scroll'}}>
+      <main className="w-100 my-5">
         <Outlet />
       </main>
 
