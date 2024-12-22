@@ -123,7 +123,7 @@ header{
     width: 150px;
   }
   .searchOrderInput:focus{
-    width: 180px;
+    width: 140px;
   }
   .cartOverview{
     padding: 0px 10px;
@@ -149,5 +149,8 @@ header{
   }
   .orderBtn2{
     padding: 3px 5px;
+  }
+  .newOrderInput:focus{
+    width: 250px;
   }
 }
